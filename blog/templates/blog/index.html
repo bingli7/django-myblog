@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>岳周's Blog</title>
+</head>
+<body>
+<h1>
+    {% for article in articles %}
+        <a href="article">{{ article.title }}</a>
+    {% endfor %}
+</h1>
+</body>
+</html>
