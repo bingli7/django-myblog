@@ -7,8 +7,12 @@
 <body>
 <h1>
     {% for article in articles %}
-        <a href="article">{{ article.title }}</a>
+        <a href="{%  url 'blog:article_page' article.id %}">{{ article.title }}</a>
+        <br/><br/>
     {% endfor %}
 </h1>
+<h3>
+    <a href="{% url 'blog:article_edit' 0 %}">新建文章</a>
+</h3>
 </body>
 </html>
