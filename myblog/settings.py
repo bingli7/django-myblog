@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '++9ymr$g=h5grnn=vj%#8y3-+-8d$+=ln9-ie2-4=p!qn%rlmj'
+SECRET_KEY = '8q66y4j5iifx^)1ul3(59jpvr(62#0emwf^_xcl_#$83-am7or'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
+    'simpleblog',   # 新增本行
 )
 
 MIDDLEWARE_CLASSES = (
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'myblog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'myblog',
+        'USER': 'bloguser',
+        'PASSWORD': 'blogpassword',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
@@ -86,8 +90,9 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'zh-hans'
+LANGUAGE_CODE = 'en-us'
 
+# CN:   Asia/Shanghai
 TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True

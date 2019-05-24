@@ -13,10 +13,10 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Article',
             fields=[
-                ('id', models.AutoField(serialize=False, primary_key=True, verbose_name='ID', auto_created=True)),
+                ('id', models.AutoField(verbose_name='ID', auto_created=True, primary_key=True, serialize=False)),
                 ('title', models.CharField(verbose_name='标题', max_length=200)),
-                ('content', models.TextField(default='Blog Content', verbose_name='内容')),
-                ('pub_time', models.DateTimeField(verbose_name='发表日期', auto_now=True)),
+                ('content', models.TextField(verbose_name='内容', default='blog content')),
+                ('pub_date', models.DateTimeField(verbose_name='发表时间', auto_now=True)),
             ],
         ),
     ]

@@ -16,6 +16,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^blog/', include('blog.urls', namespace='blog')),
+    # 注意单引号，并指定namespace
+    url(r'^blog/', include('simpleblog.urls', namespace='simpleblog')),
     url(r'^admin/', include(admin.site.urls)),
 ]

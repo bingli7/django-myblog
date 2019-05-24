@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ article.title }}</title>
+</head>
+<body>
+<h1>
+    {{ article.title }}
+</h1>
+<br/>
+<h2>
+    {{ article.content }}
+</h2>
+<br/><br/>
+<h4>
+    <a href="{% url 'simpleblog:edit_page' article.id %}">编辑此文章</a>
+</h4>
+</body>
+</html>

@@ -7,12 +7,13 @@
 <body>
 <h1>
     {% for article in articles %}
-        <a href="{%  url 'blog:article_page' article.id %}">{{ article.title }}</a>
-        <br/><br/>
+        <a href="{% url 'simpleblog:article_page' article.id %}">{{ article.title }}</a>
+        <br/>
     {% endfor %}
 </h1>
+<br/><br/>
 <h3>
-    <a href="{% url 'blog:article_edit' 0 %}">新建文章</a>
+    <a href="{% url 'simpleblog:edit_page' 0 %}">发表博客</a>
 </h3>
 </body>
 </html>
